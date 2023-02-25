@@ -38,8 +38,8 @@ public class Loan
         Expiry = expiry;
         Strategy = capitalStrategy switch
         {
-            null when expiry == null => new CapitalStrategyTermLoan(),
-            null when maturity == null => new CapitalStrategyRevolver(),
+            null when expiry is null => new CapitalStrategyTermLoan(),
+            null when maturity is null => new CapitalStrategyRevolver(),
             null => new CapitalStrategyRctl(),
             _ => capitalStrategy
         };
