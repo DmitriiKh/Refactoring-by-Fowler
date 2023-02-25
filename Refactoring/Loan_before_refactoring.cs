@@ -15,11 +15,9 @@ public class Loan
     }
 
     public Loan(double commitment, int riskRating, Date? maturity, Date? expiry) 
-        : this(commitment, outstanding: 0.00, riskRating,
-        maturity, expiry)
+        : this(commitment, outstanding: 0.00, riskRating, maturity, expiry)
     {
     }
-
 
     public Loan(double commitment, double outstanding, int riskRating, Date? maturity, Date? expiry) 
         : this(capitalStrategy: null, commitment, outstanding, riskRating, maturity, expiry)
@@ -27,14 +25,11 @@ public class Loan
     }
 
     public Loan(CapitalStrategy capitalStrategy, double commitment, int riskRating, Date? maturity, Date? expiry) 
-        : this(capitalStrategy, commitment, outstanding: 0.00, riskRating, maturity,
-        expiry)
+        : this(capitalStrategy, commitment, outstanding: 0.00, riskRating, maturity, expiry)
     {
     }
 
-    public Loan(CapitalStrategy? capitalStrategy, double commitment,
-        double outstanding, int riskRating,
-        Date? maturity, Date? expiry)
+    public Loan(CapitalStrategy? capitalStrategy, double commitment, double outstanding, int riskRating, Date? maturity, Date? expiry)
     {
         Commitment = commitment;
         Outstanding = outstanding;
